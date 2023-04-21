@@ -6,7 +6,7 @@ const homepage=fs.readFileSync("./home.html");
 const contactpage=fs.readFileSync("./contact.html")
 
 const PORT = process.env.PORT || 5000; //port number on browser
-const hostname="localhost";
+
 
 const server= http.createServer(
     (req,res)=>
@@ -27,4 +27,4 @@ const server= http.createServer(
         }
 );
 
-server.listen(PORT,hostname,()=>{console.log(`server started`)});
+server.listen(PORT,()=>{console.log(`server started`)});
