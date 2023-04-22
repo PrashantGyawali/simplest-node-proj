@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "./server.js": {
-      "memory": 1024
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",
