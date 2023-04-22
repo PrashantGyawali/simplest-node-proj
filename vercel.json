@@ -1,18 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@now/node"
+  "functions": {
+    "server.js": {
+      "memory": 1024
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "server.js"
+      "source": "/(.*)",
+      "destination": "server.js"
     }
-  ],
-  "files": [
-    "output/server/pages**"
   ]
 }
