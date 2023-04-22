@@ -7,12 +7,12 @@ const PORT = process.env.PORT || 5000; //port number on browser
 
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
-      const filePath = path.join(__dirname, 'output/server/pages', 'home.html');
+      const filePath = path.join(__dirname, '..', 'home.html');
       const stream = fs.createReadStream(filePath);
       return stream.pipe(res);
     }
     if (req.url === '/contact') {
-        const filePath = path.join(__dirname, 'output/server/pages', 'contact.html');
+        const filePath = path.join(__dirname, '..', 'contact.html');
         const stream = fs.createReadStream(filePath);
         return stream.pipe(res);
       } 
